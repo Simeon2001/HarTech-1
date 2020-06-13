@@ -1,0 +1,18 @@
+
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script> 
+  
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+ <body style="background-color:violet;"> 
+ <div class="jumbotron" style="margin:0 auto; margin-top:150px;">
+<p>Are you sure you want to delete"{{item}}"?</p>
+<a class="btn btn-info" href="{% url 'Home/' %}">Cancel</a>
+<form method="POST" action="">
+{% csrf_token %}
+<input class="btn btn-danger" type="submit" name="confirm">
+</form>
+
+</div>
+</body>
